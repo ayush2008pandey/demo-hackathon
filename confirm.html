@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PawPal · 04 Confirm</title>
+  <!-- Google Fonts: Nunito -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="annotate">
+
+  <!-- Prototype Menu (outside the device) -->
+  <nav class="proto-nav" aria-label="Prototype screens">
+    <div class="proto-nav__heading">Prototype screens</div>
+    <div class="proto-nav__group">
+      <div class="proto-nav__group-title">Journey</div>
+      <a href="index.html" class="proto-nav__link">01 Home</a>
+      <a href="request.html" class="proto-nav__link">02 Request</a>
+      <a href="clinics.html" class="proto-nav__link">03 Clinics</a>
+      <a href="confirm.html" class="proto-nav__link" aria-current="page">04 Confirm</a>
+      <a href="tracker.html" class="proto-nav__link">05 Tracker</a>
+      <a href="complete.html" class="proto-nav__link">06 Complete</a>
+    </div>
+    <div class="proto-nav__group">
+      <div class="proto-nav__group-title">Clinic side</div>
+      <a href="clinic-alert.html" class="proto-nav__link">Clinic alert</a>
+    </div>
+    <div class="proto-nav__group">
+      <div class="proto-nav__group-title">Edge states</div>
+      <a href="edge-no-clinic.html" class="proto-nav__link">No clinic open</a>
+      <a href="edge-declined.html" class="proto-nav__link">Declined</a>
+      <a href="edge-expired.html" class="proto-nav__link">Expired</a>
+    </div>
+  </nav>
+
+  <!-- Shell Stage -->
+  <div class="stage">
+    <div class="device">
+
+      <!-- Topbar -->
+      <header class="topbar">
+        <a href="clinics.html" class="topbar__back" aria-label="Go back to clinic list">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </a>
+        <div class="topbar__title">Review Details</div>
+        <div class="topbar__spacer" aria-hidden="true"></div>
+      </header>
+
+      <!-- Main Screen Content -->
+      <main class="screen">
+
+        <!-- 1. Selected Clinic Card -->
+        <div class="card" style="display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+            <div>
+              <span class="chip chip--status-ready" style="margin-bottom: 6px;">Selected clinic</span>
+              <h2 style="font-size: 18px; line-height: 24px; margin: 0;">Paws & Claws 24/7 Care</h2>
+              <p style="font-size: 14px; font-weight: 600; color: var(--ink-soft); margin-top: 2px;">12th Main, HAL 2nd Stage, Indiranagar</p>
+            </div>
+            <span class="clinic-pin-badge" style="background-color: var(--primary); color: #FFFFFF;" aria-hidden="true">A</span>
+          </div>
+
+          <!-- Quick Action Bubbles -->
+          <div style="display: flex; gap: 8px;">
+            <a href="tel:+918025201234" class="btn btn--bubble" style="flex: 1;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>Call clinic</span>
+            </a>
+            <a href="#" class="btn btn--bubble" style="flex: 1;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+              </svg>
+              <span>Directions</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. Reassurance Card -->
+        <div class="card card--reassurance" style="display: flex; gap: 14px; align-items: flex-start;">
+          <div style="width: 36px; height: 36px; min-width: 36px; border-radius: 50%; background-color: #FFFFFF; display: flex; align-items: center; justify-content: center; color: var(--primary);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <polyline points="9 12 11 14 15 10"></polyline>
+            </svg>
+          </div>
+          <div>
+            <div style="font-size: 16px; font-weight: 800; color: var(--primary-deep);">We're notifying the team now</div>
+            <p style="font-size: 14px; line-height: 20px; font-weight: 600; color: var(--ink); margin-top: 4px;">
+              They will prepare the exam room and review Biscuit's medical history before you arrive.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3. What to bring checklist -->
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <h2>What to bring with you</h2>
+          <div class="card">
+            <div class="checklist">
+              <div class="checklist__item checklist__item--checked">
+                <span class="checklist__box" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span>Biscuit's vaccination record</span>
+              </div>
+              <div class="checklist__item checklist__item--checked">
+                <span class="checklist__box" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span>Any ongoing medications</span>
+              </div>
+              <div class="checklist__item checklist__item--checked">
+                <span class="checklist__box" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span>Favorite comfort blanket or toy</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Helpful Calm Tip Card -->
+        <div class="card card--butter" style="display: flex; gap: 12px; align-items: flex-start;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #945B0A; min-width: 20px; margin-top: 2px;" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          <div style="font-size: 13px; line-height: 18px; font-weight: 600; color: #6D4304;">
+            <strong>Helpful tip:</strong> Keep Biscuit calm during the drive and avoid giving solid food until the vet examines the paw.
+          </div>
+        </div>
+
+        <!-- Sticky Actions Area -->
+        <div class="screen__actions">
+          <a href="tracker.html" class="btn btn--primary">Confirm & Start Journey</a>
+        </div>
+
+      </main>
+
+    </div>
+  </div>
+
+</body>
+</html>

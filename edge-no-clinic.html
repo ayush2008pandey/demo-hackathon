@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PawPal · No Clinic Open</title>
+  <!-- Google Fonts: Nunito -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="annotate">
+
+  <!-- Prototype Menu (outside the device) -->
+  <nav class="proto-nav" aria-label="Prototype screens">
+    <div class="proto-nav__heading">Prototype screens</div>
+    <div class="proto-nav__group">
+      <div class="proto-nav__group-title">Journey</div>
+      <a href="index.html" class="proto-nav__link">01 Home</a>
+      <a href="request.html" class="proto-nav__link">02 Request</a>
+      <a href="clinics.html" class="proto-nav__link">03 Clinics</a>
+      <a href="confirm.html" class="proto-nav__link">04 Confirm</a>
+      <a href="tracker.html" class="proto-nav__link">05 Tracker</a>
+      <a href="complete.html" class="proto-nav__link">06 Complete</a>
+    </div>
+    <div class="proto-nav__group">
+      <div class="proto-nav__group-title">Clinic side</div>
+      <a href="clinic-alert.html" class="proto-nav__link">Clinic alert</a>
+    </div>
+    <div class="proto-nav__group">
+      <div class="proto-nav__group-title">Edge states</div>
+      <a href="edge-no-clinic.html" class="proto-nav__link" aria-current="page">No clinic open</a>
+      <a href="edge-declined.html" class="proto-nav__link">Declined</a>
+      <a href="edge-expired.html" class="proto-nav__link">Expired</a>
+    </div>
+  </nav>
+
+  <!-- Shell Stage -->
+  <div class="stage">
+    <div class="device">
+
+      <!-- Topbar -->
+      <header class="topbar">
+        <a href="request.html" class="topbar__back" aria-label="Go back to request screen">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </a>
+        <div class="topbar__title">Nearby Clinics</div>
+        <div class="topbar__spacer" aria-hidden="true"></div>
+      </header>
+
+      <!-- Main Screen Content -->
+      <main class="screen">
+
+        <!-- Title & Subtitle -->
+        <div>
+          <h1>No nearby clinics open right now</h1>
+          <p class="subtitle" style="margin-top: 4px;">Here are the best next options for Biscuit</p>
+        </div>
+
+        <!-- 3 Stacked Option Cards -->
+
+        <!-- Option 1: Telehealth -->
+        <div class="card" style="display: flex; flex-direction: column; gap: 10px; border-color: rgba(35, 121, 111, 0.3);">
+          <div style="display: flex; gap: 12px; align-items: flex-start;">
+            <div style="width: 40px; height: 40px; min-width: 40px; border-radius: 12px; background-color: var(--primary-tint); color: var(--primary); display: flex; align-items: center; justify-content: center;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+              </svg>
+            </div>
+            <div>
+              <span class="chip chip--status-ready" style="margin-bottom: 4px;">Available now</span>
+              <h2 style="font-size: 17px; margin: 0;">Connect with a Telehealth Vet</h2>
+              <p style="font-size: 14px; font-weight: 600; color: var(--ink-soft); margin-top: 2px;">
+                Video consultation with a verified vet in ~5 mins
+              </p>
+            </div>
+          </div>
+          <a href="#" class="btn btn--primary" style="margin-top: 4px;">Start Video Consult</a>
+        </div>
+
+        <!-- Option 2: 24/7 Hospital Further Away -->
+        <div class="card" style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="display: flex; gap: 12px; align-items: flex-start;">
+            <div style="width: 40px; height: 40px; min-width: 40px; border-radius: 12px; background-color: var(--sky-tint); color: #1D5E8C; display: flex; align-items: center; justify-content: center;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 20V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14"></path>
+                <path d="M2 20h20"></path>
+                <path d="M14 12v.01"></path>
+              </svg>
+            </div>
+            <div>
+              <h2 style="font-size: 17px; margin: 0;">Central Veterinary Hospital (24/7)</h2>
+              <p style="font-size: 14px; font-weight: 600; color: var(--ink-soft); margin-top: 2px;">
+                12.4 km away · 25 min drive · Always open
+              </p>
+            </div>
+          </div>
+          <a href="confirm.html" class="btn btn--secondary" style="margin-top: 4px;">View Details & Directions</a>
+        </div>
+
+        <!-- Option 3: At-Home Care Guide -->
+        <div class="card card--butter" style="display: flex; gap: 12px; align-items: flex-start;">
+          <div style="width: 36px; height: 36px; min-width: 36px; border-radius: 50%; background-color: #FFFFFF; display: flex; align-items: center; justify-content: center; color: #945B0A;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            </svg>
+          </div>
+          <div>
+            <div style="font-size: 15px; font-weight: 800; color: #6D4304;">At-Home Comfort Guide</div>
+            <p style="font-size: 13px; line-height: 18px; font-weight: 600; color: #6D4304; margin-top: 2px;">
+              Gentle steps to keep Biscuit safe and rested until morning clinic hours begin at 8:00 AM.
+            </p>
+          </div>
+        </div>
+
+        <!-- Sticky Actions Area -->
+        <div class="screen__actions">
+          <a href="request.html" class="btn btn--secondary">Back to Symptom Request</a>
+        </div>
+
+      </main>
+
+    </div>
+  </div>
+
+</body>
+</html>

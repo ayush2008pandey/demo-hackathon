@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PawPal · 05 Tracker</title>
+  <!-- Google Fonts: Nunito -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="annotate">
+
+  <!-- Prototype Menu (outside the device) -->
+  <nav class="proto-nav" aria-label="Prototype screens">
+    <div class="proto-nav__heading">Prototype screens</div>
+    <div class="proto-nav__group">
+      <div class="proto-nav__group-title">Journey</div>
+      <a href="index.html" class="proto-nav__link">01 Home</a>
+      <a href="request.html" class="proto-nav__link">02 Request</a>
+      <a href="clinics.html" class="proto-nav__link">03 Clinics</a>
+      <a href="confirm.html" class="proto-nav__link">04 Confirm</a>
+      <a href="tracker.html" class="proto-nav__link" aria-current="page">05 Tracker</a>
+      <a href="complete.html" class="proto-nav__link">06 Complete</a>
+    </div>
+    <div class="proto-nav__group">
+      <div class="proto-nav__group-title">Clinic side</div>
+      <a href="clinic-alert.html" class="proto-nav__link">Clinic alert</a>
+    </div>
+    <div class="proto-nav__group">
+      <div class="proto-nav__group-title">Edge states</div>
+      <a href="edge-no-clinic.html" class="proto-nav__link">No clinic open</a>
+      <a href="edge-declined.html" class="proto-nav__link">Declined</a>
+      <a href="edge-expired.html" class="proto-nav__link">Expired</a>
+    </div>
+  </nav>
+
+  <!-- Shell Stage -->
+  <div class="stage">
+    <div class="device">
+
+      <!-- Topbar -->
+      <header class="topbar">
+        <a href="confirm.html" class="topbar__back" aria-label="Go back to confirm screen">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </a>
+        <div class="topbar__title">Visit Status</div>
+        <div class="topbar__spacer" aria-hidden="true"></div>
+      </header>
+
+      <!-- Main Screen Content -->
+      <main class="screen">
+
+        <!-- 1. Destination Summary Card -->
+        <div class="card" style="border-color: rgba(35, 121, 111, 0.3);">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+            <div>
+              <span class="chip chip--status-ready" style="margin-bottom: 6px;">Team standing by</span>
+              <h2 style="font-size: 18px; line-height: 24px; margin: 0;">Paws & Claws 24/7 Care</h2>
+              <div style="font-size: 14px; font-weight: 700; color: var(--ink-soft); margin-top: 4px;">
+                0.8 km · Estimated arrival in 6 min
+              </div>
+            </div>
+            <a href="tel:+918025201234" class="btn btn--bubble" style="width: 44px; height: 44px; min-width: 44px; padding: 0;" aria-label="Call clinic">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. Stepper Timeline Card -->
+        <div class="card" style="padding: 20px 16px;">
+          <ol class="stepper">
+
+            <!-- Step 1: Request sent (Done) -->
+            <li class="step step--done">
+              <div class="step__marker-col">
+                <div class="step__marker" aria-label="Step 1 completed: Request sent">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <div class="step__line" aria-hidden="true">
+                  <!-- Paw print divider -->
+                  <svg class="step__paw-print step__paw-print--1" viewBox="0 0 24 24" fill="currentColor">
+                    <circle cx="12" cy="14" r="4"></circle>
+                    <circle cx="6.5" cy="9.5" r="2.5"></circle>
+                    <circle cx="10" cy="5.5" r="2"></circle>
+                    <circle cx="14" cy="5.5" r="2"></circle>
+                    <circle cx="17.5" cy="9.5" r="2.5"></circle>
+                  </svg>
+                </div>
+              </div>
+              <div class="step__content">
+                <div class="step__title-row">
+                  <span class="step__title">Request sent</span>
+                  <span style="font-size: 13px; font-weight: 700; color: var(--ink-soft);">10:42 AM</span>
+                </div>
+                <div class="step__detail">Shared symptom details with clinic</div>
+              </div>
+            </li>
+
+            <!-- Step 2: Clinic confirmed (Done) -->
+            <li class="step step--done">
+              <div class="step__marker-col">
+                <div class="step__marker" aria-label="Step 2 completed: Clinic confirmed">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <div class="step__line" aria-hidden="true">
+                  <!-- Paw print divider -->
+                  <svg class="step__paw-print step__paw-print--2" viewBox="0 0 24 24" fill="currentColor">
+                    <circle cx="12" cy="14" r="4"></circle>
+                    <circle cx="6.5" cy="9.5" r="2.5"></circle>
+                    <circle cx="10" cy="5.5" r="2"></circle>
+                    <circle cx="14" cy="5.5" r="2"></circle>
+                    <circle cx="17.5" cy="9.5" r="2.5"></circle>
+                  </svg>
+                </div>
+              </div>
+              <div class="step__content">
+                <div class="step__title-row">
+                  <span class="step__title">Clinic confirmed</span>
+                  <span style="font-size: 13px; font-weight: 700; color: var(--ink-soft);">10:43 AM</span>
+                </div>
+                <div class="step__detail">Exam Room 2 reserved for Biscuit</div>
+              </div>
+            </li>
+
+            <!-- Step 3: On the way (Current) -->
+            <li class="step step--current">
+              <div class="step__marker-col">
+                <div class="step__marker" aria-label="Step 3 in progress: On the way">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+                  </svg>
+                </div>
+                <div class="step__line" aria-hidden="true">
+                  <!-- Paw print divider -->
+                  <svg class="step__paw-print step__paw-print--1" viewBox="0 0 24 24" fill="currentColor">
+                    <circle cx="12" cy="14" r="4"></circle>
+                    <circle cx="6.5" cy="9.5" r="2.5"></circle>
+                    <circle cx="10" cy="5.5" r="2"></circle>
+                    <circle cx="14" cy="5.5" r="2"></circle>
+                    <circle cx="17.5" cy="9.5" r="2.5"></circle>
+                  </svg>
+                </div>
+              </div>
+              <div class="step__content">
+                <div class="step__title-row">
+                  <span class="step__title">On the way</span>
+                  <span class="chip chip--status-ready" style="padding: 2px 8px; font-size: 12px;">Active</span>
+                </div>
+                <div class="step__detail">Drive safely. Follow directions via 100ft Road.</div>
+              </div>
+            </li>
+
+            <!-- Step 4: Arrived at clinic (Next) -->
+            <li class="step step--next">
+              <div class="step__marker-col">
+                <div class="step__marker" aria-label="Step 4 pending: Arrived at clinic">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="step__line" aria-hidden="true">
+                  <!-- Paw print divider -->
+                  <svg class="step__paw-print step__paw-print--2" viewBox="0 0 24 24" fill="currentColor">
+                    <circle cx="12" cy="14" r="4"></circle>
+                    <circle cx="6.5" cy="9.5" r="2.5"></circle>
+                    <circle cx="10" cy="5.5" r="2"></circle>
+                    <circle cx="14" cy="5.5" r="2"></circle>
+                    <circle cx="17.5" cy="9.5" r="2.5"></circle>
+                  </svg>
+                </div>
+              </div>
+              <div class="step__content">
+                <div class="step__title-row">
+                  <span class="step__title" style="color: var(--ink-soft);">Arrived at clinic</span>
+                </div>
+                <div class="step__detail">Check in at reception desk upon arrival</div>
+              </div>
+            </li>
+
+            <!-- Step 5: Consultation started (Next) -->
+            <li class="step step--next">
+              <div class="step__marker-col">
+                <div class="step__marker" aria-label="Step 5 pending: Consultation started">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <polyline points="16 11 18 13 22 9"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <div class="step__content" style="padding-bottom: 8px;">
+                <div class="step__title-row">
+                  <span class="step__title" style="color: var(--ink-soft);">Consultation started</span>
+                </div>
+                <div class="step__detail">Dr. Ananya Sharma assigned</div>
+              </div>
+            </li>
+
+          </ol>
+        </div>
+
+        <!-- 3. Reviewer Annotation Box for Edge States -->
+        <div class="annotation-box">
+          <div class="annotation-box__title">Prototype review: Explore other flows</div>
+          <div class="annotation-box__links">
+            <a href="clinic-alert.html" class="annotation-box__link">Clinic alert screen &rarr;</a>
+            <a href="edge-no-clinic.html" class="annotation-box__link">No clinic open &rarr;</a>
+            <a href="edge-declined.html" class="annotation-box__link">Clinic declined &rarr;</a>
+            <a href="edge-expired.html" class="annotation-box__link">Request expired &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Sticky Actions Area -->
+        <div class="screen__actions" style="display: flex; flex-direction: column; gap: 8px;">
+          <a href="complete.html" class="btn btn--primary">Arrived & Complete Visit</a>
+        </div>
+
+      </main>
+
+    </div>
+  </div>
+
+</body>
+</html>

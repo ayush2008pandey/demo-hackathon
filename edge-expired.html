@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PawPal · Request Expired</title>
+  <!-- Google Fonts: Nunito -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="annotate">
+
+  <!-- Prototype Menu (outside the device) -->
+  <nav class="proto-nav" aria-label="Prototype screens">
+    <div class="proto-nav__heading">Prototype screens</div>
+    <div class="proto-nav__group">
+      <div class="proto-nav__group-title">Journey</div>
+      <a href="index.html" class="proto-nav__link">01 Home</a>
+      <a href="request.html" class="proto-nav__link">02 Request</a>
+      <a href="clinics.html" class="proto-nav__link">03 Clinics</a>
+      <a href="confirm.html" class="proto-nav__link">04 Confirm</a>
+      <a href="tracker.html" class="proto-nav__link">05 Tracker</a>
+      <a href="complete.html" class="proto-nav__link">06 Complete</a>
+    </div>
+    <div class="proto-nav__group">
+      <div class="proto-nav__group-title">Clinic side</div>
+      <a href="clinic-alert.html" class="proto-nav__link">Clinic alert</a>
+    </div>
+    <div class="proto-nav__group">
+      <div class="proto-nav__group-title">Edge states</div>
+      <a href="edge-no-clinic.html" class="proto-nav__link">No clinic open</a>
+      <a href="edge-declined.html" class="proto-nav__link">Declined</a>
+      <a href="edge-expired.html" class="proto-nav__link" aria-current="page">Expired</a>
+    </div>
+  </nav>
+
+  <!-- Shell Stage -->
+  <div class="stage">
+    <div class="device">
+
+      <!-- Topbar -->
+      <header class="topbar">
+        <a href="tracker.html" class="topbar__back" aria-label="Go back to tracker">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </a>
+        <div class="topbar__title">Request Status</div>
+        <div class="topbar__spacer" aria-hidden="true"></div>
+      </header>
+
+      <!-- Main Screen Content -->
+      <main class="screen">
+
+        <!-- Title & Subtitle -->
+        <div>
+          <h1>Request timed out</h1>
+          <p class="subtitle" style="margin-top: 4px;">Paws & Claws did not respond in 3 minutes. Let's send Biscuit's request to other nearby clinics.</p>
+        </div>
+
+        <!-- Timeout Info Card -->
+        <div class="card" style="display: flex; gap: 14px; align-items: flex-start; border-color: rgba(246, 185, 59, 0.4);">
+          <div style="width: 40px; height: 40px; min-width: 40px; border-radius: 12px; background-color: var(--butter-tint); color: #945B0A; display: flex; align-items: center; justify-content: center;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <div>
+            <h2 style="font-size: 16px; margin: 0; color: var(--ink);">Auto-forwarding available</h2>
+            <p style="font-size: 14px; line-height: 20px; font-weight: 600; color: var(--ink-soft); margin-top: 4px;">
+              We can immediately notify Happy Tails and Cessna Lifeline with Biscuit's symptom details so you can head over without delay.
+            </p>
+          </div>
+        </div>
+
+        <!-- Previous Clinic Summary -->
+        <div class="card" style="display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <div style="font-size: 15px; font-weight: 800; color: var(--ink);">Paws & Claws 24/7 Care</div>
+            <div style="font-size: 13px; font-weight: 600; color: var(--ink-soft);">0.8 km · No response received</div>
+          </div>
+          <a href="tel:+918025201234" class="btn btn--bubble" aria-label="Call clinic directly">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>Call</span>
+          </a>
+        </div>
+
+        <!-- Sticky Actions Area -->
+        <div class="screen__actions" style="display: flex; flex-direction: column; gap: 8px;">
+          <a href="clinics.html" class="btn btn--primary">Send to Next Available Clinic</a>
+          <a href="tracker.html" class="btn btn--secondary">Back to Tracker</a>
+        </div>
+
+      </main>
+
+    </div>
+  </div>
+
+</body>
+</html>

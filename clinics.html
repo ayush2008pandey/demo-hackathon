@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PawPal · 03 Clinics</title>
+  <!-- Google Fonts: Nunito -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="annotate">
+
+  <!-- Prototype Menu (outside the device) -->
+  <nav class="proto-nav" aria-label="Prototype screens">
+    <div class="proto-nav__heading">Prototype screens</div>
+    <div class="proto-nav__group">
+      <div class="proto-nav__group-title">Journey</div>
+      <a href="index.html" class="proto-nav__link">01 Home</a>
+      <a href="request.html" class="proto-nav__link">02 Request</a>
+      <a href="clinics.html" class="proto-nav__link" aria-current="page">03 Clinics</a>
+      <a href="confirm.html" class="proto-nav__link">04 Confirm</a>
+      <a href="tracker.html" class="proto-nav__link">05 Tracker</a>
+      <a href="complete.html" class="proto-nav__link">06 Complete</a>
+    </div>
+    <div class="proto-nav__group">
+      <div class="proto-nav__group-title">Clinic side</div>
+      <a href="clinic-alert.html" class="proto-nav__link">Clinic alert</a>
+    </div>
+    <div class="proto-nav__group">
+      <div class="proto-nav__group-title">Edge states</div>
+      <a href="edge-no-clinic.html" class="proto-nav__link">No clinic open</a>
+      <a href="edge-declined.html" class="proto-nav__link">Declined</a>
+      <a href="edge-expired.html" class="proto-nav__link">Expired</a>
+    </div>
+  </nav>
+
+  <!-- Shell Stage -->
+  <div class="stage">
+    <div class="device">
+
+      <!-- Topbar -->
+      <header class="topbar">
+        <a href="request.html" class="topbar__back" aria-label="Go back to request screen">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </a>
+        <div class="topbar__title">Matching Clinics</div>
+        <div class="topbar__spacer" aria-hidden="true"></div>
+      </header>
+
+      <!-- Main Screen Content -->
+      <main class="screen">
+
+        <!-- Map Schematic Placeholder -->
+        <div class="map-box" aria-label="Map showing 3 nearby clinics" role="region">
+          <svg class="map-svg" viewBox="0 0 350 150" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Background land -->
+            <rect width="350" height="150" fill="#F4EFE6"/>
+            <!-- Park / green zones -->
+            <path d="M10 20 Q40 10 70 30 T110 40 L90 80 L30 70 Z" fill="#E2EFE9" opacity="0.8"/>
+            <path d="M260 90 Q290 80 330 100 T340 140 L280 140 Z" fill="#E2EFE9" opacity="0.8"/>
+            <!-- Road network -->
+            <path d="M-10 60 L360 85" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"/>
+            <path d="M-10 60 L360 85" stroke="#EAE3D8" stroke-width="8" stroke-linecap="round"/>
+
+            <path d="M140 -10 L170 160" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/>
+            <path d="M140 -10 L170 160" stroke="#EAE3D8" stroke-width="6" stroke-linecap="round"/>
+
+            <path d="M40 160 L120 -10" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+            <path d="M40 160 L120 -10" stroke="#EAE3D8" stroke-width="4" stroke-linecap="round"/>
+
+            <path d="M220 -10 L280 160" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+            <path d="M220 -10 L280 160" stroke="#EAE3D8" stroke-width="4" stroke-linecap="round"/>
+
+            <!-- Connecting route to Clinic A -->
+            <path d="M110 70 Q135 72 155 75 T195 50" stroke="#23796F" stroke-width="3" stroke-dasharray="4 4" fill="none"/>
+
+            <!-- You are here pin -->
+            <g transform="translate(110, 70)">
+              <circle cx="0" cy="0" r="10" fill="#23796F" fill-opacity="0.2"/>
+              <circle cx="0" cy="0" r="5" fill="#23796F"/>
+              <circle cx="0" cy="0" r="2.5" fill="#FFFFFF"/>
+            </g>
+
+            <!-- Pin A (Best match) -->
+            <g transform="translate(195, 50)">
+              <circle cx="0" cy="0" r="14" fill="#23796F" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.15))"/>
+              <text x="0" y="4" fill="#FFFFFF" font-family="'Nunito', sans-serif" font-weight="800" font-size="11" text-anchor="middle">A</text>
+            </g>
+
+            <!-- Pin B -->
+            <g transform="translate(275, 75)">
+              <circle cx="0" cy="0" r="12" fill="#5B6776"/>
+              <text x="0" y="4" fill="#FFFFFF" font-family="'Nunito', sans-serif" font-weight="800" font-size="10" text-anchor="middle">B</text>
+            </g>
+
+            <!-- Pin C -->
+            <g transform="translate(65, 115)">
+              <circle cx="0" cy="0" r="12" fill="#5B6776"/>
+              <text x="0" y="4" fill="#FFFFFF" font-family="'Nunito', sans-serif" font-weight="800" font-size="10" text-anchor="middle">C</text>
+            </g>
+          </svg>
+        </div>
+
+        <!-- Heading -->
+        <div>
+          <h1>3 clinics open nearby</h1>
+          <p class="subtitle" style="margin-top: 4px;">Sorted by distance and triage availability for hurt paw</p>
+        </div>
+
+        <!-- 1. Clinic Card A (Best Match) -->
+        <article class="card card--interactive clinic-card" style="border-color: rgba(35, 121, 111, 0.4);">
+          <div class="clinic-card__header">
+            <div class="clinic-card__title-group">
+              <span class="clinic-pin-badge" style="background-color: var(--primary); color: #FFFFFF;" aria-label="Clinic marker A">A</span>
+              <div>
+                <h2 style="font-size: 17px; line-height: 22px; margin: 0;">Paws & Claws 24/7 Care</h2>
+                <div class="clinic-card__meta-row" style="margin-top: 2px;">
+                  <span style="font-size: 13px; font-weight: 700; color: var(--ink-soft);">0.8 km · 6 min drive</span>
+                  <span class="chip chip--status-ready">Ready for walk-in</span>
+                </div>
+              </div>
+            </div>
+            <span class="chip chip--best-match">Best match</span>
+          </div>
+
+          <!-- Service Chips -->
+          <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+            <span class="chip chip--service">Emergency care</span>
+            <span class="chip chip--service">X-ray on site</span>
+            <span class="chip chip--service">Orthopedic vet</span>
+          </div>
+
+          <!-- CTA Button -->
+          <a href="confirm.html" class="btn btn--primary" style="margin-top: 4px;">Select this clinic</a>
+        </article>
+
+        <!-- 2. Clinic Card B -->
+        <article class="card clinic-card">
+          <div class="clinic-card__header">
+            <div class="clinic-card__title-group">
+              <span class="clinic-pin-badge" aria-label="Clinic marker B">B</span>
+              <div>
+                <h2 style="font-size: 17px; line-height: 22px; margin: 0;">Happy Tails Veterinary Hospital</h2>
+                <div class="clinic-card__meta-row" style="margin-top: 2px;">
+                  <span style="font-size: 13px; font-weight: 700; color: var(--ink-soft);">1.4 km · 11 min drive</span>
+                  <span class="chip chip--service">Wait: ~15 min</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Chips -->
+          <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+            <span class="chip chip--service">General practice</span>
+            <span class="chip chip--service">Diagnostics</span>
+          </div>
+
+          <!-- CTA Button -->
+          <a href="confirm.html" class="btn btn--secondary" style="margin-top: 4px;">Select this clinic</a>
+        </article>
+
+        <!-- 3. Clinic Card C -->
+        <article class="card clinic-card">
+          <div class="clinic-card__header">
+            <div class="clinic-card__title-group">
+              <span class="clinic-pin-badge" aria-label="Clinic marker C">C</span>
+              <div>
+                <h2 style="font-size: 17px; line-height: 22px; margin: 0;">Cessna Lifeline Care</h2>
+                <div class="clinic-card__meta-row" style="margin-top: 2px;">
+                  <span style="font-size: 13px; font-weight: 700; color: var(--ink-soft);">2.1 km · 16 min drive</span>
+                  <span class="chip chip--service">Open 24 hrs</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Chips -->
+          <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+            <span class="chip chip--service">ICU</span>
+            <span class="chip chip--service">Surgery</span>
+            <span class="chip chip--service">Pharmacy</span>
+          </div>
+
+          <!-- CTA Button -->
+          <a href="confirm.html" class="btn btn--secondary" style="margin-top: 4px;">Select this clinic</a>
+        </article>
+
+      </main>
+
+    </div>
+  </div>
+
+</body>
+</html>

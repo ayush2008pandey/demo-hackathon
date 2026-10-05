@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PawPal · Clinic Declined</title>
+  <!-- Google Fonts: Nunito -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="annotate">
+
+  <!-- Prototype Menu (outside the device) -->
+  <nav class="proto-nav" aria-label="Prototype screens">
+    <div class="proto-nav__heading">Prototype screens</div>
+    <div class="proto-nav__group">
+      <div class="proto-nav__group-title">Journey</div>
+      <a href="index.html" class="proto-nav__link">01 Home</a>
+      <a href="request.html" class="proto-nav__link">02 Request</a>
+      <a href="clinics.html" class="proto-nav__link">03 Clinics</a>
+      <a href="confirm.html" class="proto-nav__link">04 Confirm</a>
+      <a href="tracker.html" class="proto-nav__link">05 Tracker</a>
+      <a href="complete.html" class="proto-nav__link">06 Complete</a>
+    </div>
+    <div class="proto-nav__group">
+      <div class="proto-nav__group-title">Clinic side</div>
+      <a href="clinic-alert.html" class="proto-nav__link">Clinic alert</a>
+    </div>
+    <div class="proto-nav__group">
+      <div class="proto-nav__group-title">Edge states</div>
+      <a href="edge-no-clinic.html" class="proto-nav__link">No clinic open</a>
+      <a href="edge-declined.html" class="proto-nav__link" aria-current="page">Declined</a>
+      <a href="edge-expired.html" class="proto-nav__link">Expired</a>
+    </div>
+  </nav>
+
+  <!-- Shell Stage -->
+  <div class="stage">
+    <div class="device">
+
+      <!-- Topbar -->
+      <header class="topbar">
+        <a href="tracker.html" class="topbar__back" aria-label="Go back to tracker">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </a>
+        <div class="topbar__title">Update on Request</div>
+        <div class="topbar__spacer" aria-hidden="true"></div>
+      </header>
+
+      <!-- Main Screen Content -->
+      <main class="screen">
+
+        <!-- Title & Subtitle -->
+        <div>
+          <h1>Paws & Claws is at capacity</h1>
+          <p class="subtitle" style="margin-top: 4px;">They cannot take new walk-ins right now. We found another clinic ready for Biscuit.</p>
+        </div>
+
+        <!-- New Recommended Clinic Card -->
+        <div class="card" style="display: flex; flex-direction: column; gap: 12px; border-color: rgba(35, 121, 111, 0.4);">
+          <div class="clinic-card__header">
+            <div class="clinic-card__title-group">
+              <span class="clinic-pin-badge" style="background-color: var(--primary); color: #FFFFFF;" aria-label="Clinic marker B">B</span>
+              <div>
+                <h2 style="font-size: 17px; margin: 0;">Happy Tails Veterinary Hospital</h2>
+                <div class="clinic-card__meta-row" style="margin-top: 2px;">
+                  <span style="font-size: 13px; font-weight: 700; color: var(--ink-soft);">1.4 km · 11 min drive</span>
+                  <span class="chip chip--status-ready">Ready to accept</span>
+                </div>
+              </div>
+            </div>
+            <span class="chip chip--best-match">Recommended</span>
+          </div>
+
+          <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+            <span class="chip chip--service">General practice</span>
+            <span class="chip chip--service">Diagnostics</span>
+          </div>
+
+          <a href="confirm.html" class="btn btn--primary" style="margin-top: 4px;">Switch to Happy Tails</a>
+        </div>
+
+        <!-- Clinic Response Breakdown List -->
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <h2>All Clinic Responses</h2>
+          <div class="card">
+            <div class="list-rows">
+
+              <!-- Clinic 1 -->
+              <div class="list-row">
+                <div class="list-row__left">
+                  <span class="clinic-pin-badge" aria-hidden="true" style="width: 24px; height: 24px; min-width: 24px; font-size: 12px;">A</span>
+                  <div class="list-row__title" style="font-size: 14px;">Paws & Claws 24/7 Care</div>
+                </div>
+                <span class="chip chip--coral" style="font-size: 12px;">At full capacity</span>
+              </div>
+
+              <!-- Clinic 2 -->
+              <div class="list-row">
+                <div class="list-row__left">
+                  <span class="clinic-pin-badge" aria-hidden="true" style="width: 24px; height: 24px; min-width: 24px; font-size: 12px; background-color: var(--primary); color: #FFFFFF;">B</span>
+                  <div class="list-row__title" style="font-size: 14px;">Happy Tails Hospital</div>
+                </div>
+                <span class="chip chip--status-ready" style="font-size: 12px;">Ready</span>
+              </div>
+
+              <!-- Clinic 3 -->
+              <div class="list-row">
+                <div class="list-row__left">
+                  <span class="clinic-pin-badge" aria-hidden="true" style="width: 24px; height: 24px; min-width: 24px; font-size: 12px;">C</span>
+                  <div class="list-row__title" style="font-size: 14px;">Cessna Lifeline Care</div>
+                </div>
+                <span class="chip chip--service" style="font-size: 12px;">Standby</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Sticky Actions Area -->
+        <div class="screen__actions">
+          <a href="clinics.html" class="btn btn--secondary">View All Clinics</a>
+        </div>
+
+      </main>
+
+    </div>
+  </div>
+
+</body>
+</html>

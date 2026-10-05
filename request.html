@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PawPal · 02 Request</title>
+  <!-- Google Fonts: Nunito -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="annotate">
+
+  <!-- Prototype Menu (outside the device) -->
+  <nav class="proto-nav" aria-label="Prototype screens">
+    <div class="proto-nav__heading">Prototype screens</div>
+    <div class="proto-nav__group">
+      <div class="proto-nav__group-title">Journey</div>
+      <a href="index.html" class="proto-nav__link">01 Home</a>
+      <a href="request.html" class="proto-nav__link" aria-current="page">02 Request</a>
+      <a href="clinics.html" class="proto-nav__link">03 Clinics</a>
+      <a href="confirm.html" class="proto-nav__link">04 Confirm</a>
+      <a href="tracker.html" class="proto-nav__link">05 Tracker</a>
+      <a href="complete.html" class="proto-nav__link">06 Complete</a>
+    </div>
+    <div class="proto-nav__group">
+      <div class="proto-nav__group-title">Clinic side</div>
+      <a href="clinic-alert.html" class="proto-nav__link">Clinic alert</a>
+    </div>
+    <div class="proto-nav__group">
+      <div class="proto-nav__group-title">Edge states</div>
+      <a href="edge-no-clinic.html" class="proto-nav__link">No clinic open</a>
+      <a href="edge-declined.html" class="proto-nav__link">Declined</a>
+      <a href="edge-expired.html" class="proto-nav__link">Expired</a>
+    </div>
+  </nav>
+
+  <!-- Shell Stage -->
+  <div class="stage">
+    <div class="device request">
+
+      <!-- Topbar -->
+      <header class="topbar">
+        <a href="index.html" class="topbar__back" aria-label="Go back to home">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </a>
+        <div class="topbar__title">What's happening?</div>
+        <div class="topbar__spacer" aria-hidden="true"></div>
+      </header>
+
+      <!-- Main Screen Content -->
+      <main class="screen">
+
+        <!-- Title & Subtitle -->
+        <div>
+          <h1>What are you noticing?</h1>
+          <p class="subtitle" style="margin-top: 4px;">Pick the closest match. We'll share this with the clinic so they can prepare.</p>
+        </div>
+
+        <!-- Symptom Tiles Grid -->
+        <fieldset class="tiles" style="border: 0; padding: 0; margin: 0;">
+          <legend class="visually-hidden">Select Biscuit's primary symptom</legend>
+
+          <!-- 1. Not eating or drinking -->
+          <label>
+            <input type="radio" name="symptom" value="not-eating" class="visually-hidden">
+            <span class="tile">
+              <span class="tile__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                  <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                  <line x1="6" y1="1" x2="6" y2="4"></line>
+                  <line x1="10" y1="1" x2="10" y2="4"></line>
+                  <line x1="14" y1="1" x2="14" y2="4"></line>
+                </svg>
+              </span>
+              <span class="tile__label">Not eating or drinking</span>
+            </span>
+          </label>
+
+          <!-- 2. Vomiting or upset tummy -->
+          <label>
+            <input type="radio" name="symptom" value="upset-tummy" class="visually-hidden">
+            <span class="tile">
+              <span class="tile__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M2 12h5l3 7 4-14 3 7h5"></path>
+                </svg>
+              </span>
+              <span class="tile__label">Vomiting or upset tummy</span>
+            </span>
+          </label>
+
+          <!-- 3. Limping or hurt paw (Default checked for 3-tap prototype journey) -->
+          <label style="position: relative;">
+            <span class="tap-pin" aria-hidden="true">Tap 2</span>
+            <input type="radio" name="symptom" value="limping" class="visually-hidden" checked>
+            <span class="tile">
+              <span class="tile__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="14" r="4"></circle>
+                  <circle cx="6.5" cy="9.5" r="2.5"></circle>
+                  <circle cx="10" cy="5.5" r="2"></circle>
+                  <circle cx="14" cy="5.5" r="2"></circle>
+                  <circle cx="17.5" cy="9.5" r="2.5"></circle>
+                </svg>
+              </span>
+              <span class="tile__label">Limping or hurt paw</span>
+            </span>
+          </label>
+
+          <!-- 4. Breathing heavily -->
+          <label>
+            <input type="radio" name="symptom" value="breathing" class="visually-hidden">
+            <span class="tile">
+              <span class="tile__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+                </svg>
+              </span>
+              <span class="tile__label">Breathing heavily</span>
+            </span>
+          </label>
+
+          <!-- 5. Eye or ear issue -->
+          <label>
+            <input type="radio" name="symptom" value="eye-ear" class="visually-hidden">
+            <span class="tile">
+              <span class="tile__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </span>
+              <span class="tile__label">Eye or ear issue</span>
+            </span>
+          </label>
+
+          <!-- 6. Something else -->
+          <label>
+            <input type="radio" name="symptom" value="other" class="visually-hidden">
+            <span class="tile">
+              <span class="tile__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                  <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+              </span>
+              <span class="tile__label">Something else</span>
+            </span>
+          </label>
+        </fieldset>
+
+        <!-- Location Row -->
+        <div class="location-row">
+          <div class="location-row__left">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>Indiranagar, 100ft Rd</span>
+          </div>
+          <a href="#" class="chip chip--action" style="padding: 4px 10px; font-size: 13px;">Change</a>
+        </div>
+
+        <!-- Sticky Actions Area -->
+        <div class="screen__actions" style="position: relative;">
+          <span class="tap-pin" aria-hidden="true">Tap 3</span>
+          <a href="clinics.html" class="btn btn--primary btn-send">
+            <span class="send-idle">Pick a symptom to continue</span>
+            <span class="send-ready">Find nearby clinics</span>
+          </a>
+        </div>
+
+      </main>
+
+    </div>
+  </div>
+
+</body>
+</html>

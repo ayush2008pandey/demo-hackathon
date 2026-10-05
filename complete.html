@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PawPal · 06 Complete</title>
+  <!-- Google Fonts: Nunito -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="annotate">
+
+  <!-- Prototype Menu (outside the device) -->
+  <nav class="proto-nav" aria-label="Prototype screens">
+    <div class="proto-nav__heading">Prototype screens</div>
+    <div class="proto-nav__group">
+      <div class="proto-nav__group-title">Journey</div>
+      <a href="index.html" class="proto-nav__link">01 Home</a>
+      <a href="request.html" class="proto-nav__link">02 Request</a>
+      <a href="clinics.html" class="proto-nav__link">03 Clinics</a>
+      <a href="confirm.html" class="proto-nav__link">04 Confirm</a>
+      <a href="tracker.html" class="proto-nav__link">05 Tracker</a>
+      <a href="complete.html" class="proto-nav__link" aria-current="page">06 Complete</a>
+    </div>
+    <div class="proto-nav__group">
+      <div class="proto-nav__group-title">Clinic side</div>
+      <a href="clinic-alert.html" class="proto-nav__link">Clinic alert</a>
+    </div>
+    <div class="proto-nav__group">
+      <div class="proto-nav__group-title">Edge states</div>
+      <a href="edge-no-clinic.html" class="proto-nav__link">No clinic open</a>
+      <a href="edge-declined.html" class="proto-nav__link">Declined</a>
+      <a href="edge-expired.html" class="proto-nav__link">Expired</a>
+    </div>
+  </nav>
+
+  <!-- Shell Stage -->
+  <div class="stage">
+    <div class="device">
+
+      <!-- Topbar -->
+      <header class="topbar">
+        <a href="tracker.html" class="topbar__back" aria-label="Go back to tracker">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </a>
+        <div class="topbar__title">Visit Summary</div>
+        <div class="topbar__spacer" aria-hidden="true"></div>
+      </header>
+
+      <!-- Main Screen Content -->
+      <main class="screen">
+
+        <!-- 1. 140px Badge Illustration with Sparkles -->
+        <div class="complete-illustration" aria-hidden="true">
+          <!-- Sparkle Top Left -->
+          <svg class="sparkle" style="top: 8px; left: 16px; width: 22px; height: 22px;" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/>
+          </svg>
+          <!-- Sparkle Top Right -->
+          <svg class="sparkle" style="top: 14px; right: 14px; width: 18px; height: 18px;" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 9.41L12 0Z"/>
+          </svg>
+          <!-- Sparkle Bottom Right -->
+          <svg class="sparkle" style="bottom: 12px; right: 20px; width: 16px; height: 16px;" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 9.41L12 0Z"/>
+          </svg>
+
+          <!-- Main Badge Center Icon (Paw with checkmark) -->
+          <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="14" r="4"></circle>
+            <circle cx="6.5" cy="9.5" r="2.5"></circle>
+            <circle cx="10" cy="5.5" r="2"></circle>
+            <circle cx="14" cy="5.5" r="2"></circle>
+            <circle cx="17.5" cy="9.5" r="2.5"></circle>
+            <polyline points="9 14 11 16 15 12" stroke="#FFFFFF" stroke-width="2.5"></polyline>
+          </svg>
+        </div>
+
+        <!-- 2. Heading & Subtitle -->
+        <div style="text-align: center; margin-top: 4px;">
+          <h1 style="font-size: 24px; line-height: 30px;">Biscuit is all taken care of</h1>
+          <p class="subtitle" style="margin-top: 4px;">Exam completed at Paws & Claws 24/7 Care</p>
+        </div>
+
+        <!-- 3. Care Summary Card -->
+        <div class="card" style="display: flex; flex-direction: column; gap: 12px;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h2 style="font-size: 17px; margin: 0;">Care Summary</h2>
+            <span class="chip chip--status-ready">Completed</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 20px;">
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 6px;">
+              <span style="color: var(--ink-soft); font-weight: 600;">Attending Vet</span>
+              <span style="color: var(--ink); font-weight: 700;">Dr. Ananya Sharma</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 6px;">
+              <span style="color: var(--ink-soft); font-weight: 600;">Diagnosis</span>
+              <span style="color: var(--ink); font-weight: 700;">Minor paw sprain</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 6px;">
+              <span style="color: var(--ink-soft); font-weight: 600;">Treatment</span>
+              <span style="color: var(--ink); font-weight: 700;">Soothing balm & wrap</span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <span style="color: var(--ink-soft); font-weight: 600;">Recommended rest</span>
+              <span style="color: var(--ink); font-weight: 700;">3 days quiet recovery</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Digital Records Card -->
+        <div class="card" style="display: flex; align-items: center; justify-content: space-between;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="width: 40px; height: 40px; border-radius: 12px; background-color: var(--primary-tint); color: var(--primary); display: flex; align-items: center; justify-content: center;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <div>
+              <div style="font-size: 15px; font-weight: 800; color: var(--ink);">Digital Prescription</div>
+              <div style="font-size: 13px; font-weight: 600; color: var(--ink-soft);">Saved to Biscuit's health vault</div>
+            </div>
+          </div>
+          <a href="#" class="chip chip--action" style="padding: 6px 12px; font-size: 13px;">View PDF</a>
+        </div>
+
+        <!-- Sticky Actions Area -->
+        <div class="screen__actions">
+          <a href="index.html" class="btn btn--primary">Back to Home</a>
+        </div>
+
+      </main>
+
+    </div>
+  </div>
+
+</body>
+</html>

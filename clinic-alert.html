@@ -1,0 +1,164 @@
+<!-- Triage Priority Mapping: Limping or hurt paw -> Priority 2 (Prompt attention required; prepare exam room & splint/imaging) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PawPal · Clinic Alert</title>
+  <!-- Google Fonts: Nunito -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="annotate">
+
+  <!-- Prototype Menu (outside the device) -->
+  <nav class="proto-nav" aria-label="Prototype screens">
+    <div class="proto-nav__heading">Prototype screens</div>
+    <div class="proto-nav__group">
+      <div class="proto-nav__group-title">Journey</div>
+      <a href="index.html" class="proto-nav__link">01 Home</a>
+      <a href="request.html" class="proto-nav__link">02 Request</a>
+      <a href="clinics.html" class="proto-nav__link">03 Clinics</a>
+      <a href="confirm.html" class="proto-nav__link">04 Confirm</a>
+      <a href="tracker.html" class="proto-nav__link">05 Tracker</a>
+      <a href="complete.html" class="proto-nav__link">06 Complete</a>
+    </div>
+    <div class="proto-nav__group">
+      <div class="proto-nav__group-title">Clinic side</div>
+      <a href="clinic-alert.html" class="proto-nav__link" aria-current="page">Clinic alert</a>
+    </div>
+    <div class="proto-nav__group">
+      <div class="proto-nav__group-title">Edge states</div>
+      <a href="edge-no-clinic.html" class="proto-nav__link">No clinic open</a>
+      <a href="edge-declined.html" class="proto-nav__link">Declined</a>
+      <a href="edge-expired.html" class="proto-nav__link">Expired</a>
+    </div>
+  </nav>
+
+  <!-- Shell Stage -->
+  <div class="stage">
+    <div class="device">
+
+      <!-- Topbar (Clinic Portal) -->
+      <header class="topbar">
+        <a href="index.html" class="topbar__back" aria-label="Go to parent home">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </a>
+        <div class="topbar__title">Clinic Intake Portal</div>
+        <div class="topbar__spacer" aria-hidden="true"></div>
+      </header>
+
+      <!-- Main Screen Content -->
+      <main class="screen">
+
+        <!-- Intake Header -->
+        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+          <div>
+            <h1>Incoming Patient</h1>
+            <p class="subtitle" style="margin-top: 2px;">Received 2 mins ago · ETA 6 min</p>
+          </div>
+          <span class="chip chip--coral" style="font-size: 13px;">Priority 2 · Moderate</span>
+        </div>
+
+        <!-- Patient Profile Card -->
+        <div class="card" style="display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; gap: 14px; align-items: center;">
+            <div class="pet-avatar pet-avatar--72">
+              <svg width="72" height="72" viewBox="0 0 72 72" fill="none" aria-label="Biscuit the Labrador" role="img">
+                <circle cx="36" cy="36" r="36" fill="#FFF3D6"/>
+                <!-- Floppy Left Ear -->
+                <path d="M22 26C16 26 14 36 17 44C19 49 24 50 25 45C26 40 25 32 22 26Z" fill="#E5A65E"/>
+                <!-- Floppy Right Ear -->
+                <path d="M50 26C56 26 58 36 55 44C53 49 48 50 47 45C46 40 47 32 50 26Z" fill="#E5A65E"/>
+                <!-- Head Base -->
+                <ellipse cx="36" cy="38" rx="20" ry="18" fill="#F6C386"/>
+                <!-- Snout muzzle -->
+                <ellipse cx="36" cy="44" rx="9" ry="7" fill="#FDF4E7"/>
+                <!-- Nose -->
+                <path d="M33 41C33 40 39 40 39 41C39 43 37 44.5 36 44.5C35 44.5 33 43 33 41Z" fill="#1F2A37"/>
+                <!-- Mouth line -->
+                <path d="M36 44.5V47M34 46C34.8 47 35.5 47 36 47C36.5 47 37.2 47 38 46" stroke="#1F2A37" stroke-width="1.5" stroke-linecap="round"/>
+                <!-- Eyes -->
+                <circle cx="29" cy="36" r="2.5" fill="#1F2A37"/>
+                <circle cx="43" cy="36" r="2.5" fill="#1F2A37"/>
+                <circle cx="29.8" cy="35.2" r="0.8" fill="#FFFFFF"/>
+                <circle cx="43.8" cy="35.2" r="0.8" fill="#FFFFFF"/>
+              </svg>
+            </div>
+            <div>
+              <div style="font-size: 19px; font-weight: 800; color: var(--ink);">Biscuit</div>
+              <div style="font-size: 14px; font-weight: 700; color: var(--ink-soft);">Labrador · 3 yrs · 28 kg</div>
+              <div style="font-size: 13px; font-weight: 600; color: var(--ink-soft); margin-top: 2px;">Parent: Riya Sharma</div>
+            </div>
+          </div>
+
+          <hr style="border: 0; border-top: 1px solid var(--line); margin: 0;">
+
+          <!-- Triage Symptoms Details -->
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div style="font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-soft);">Reported Symptom</div>
+            <div style="font-size: 15px; font-weight: 700; color: var(--ink); display: flex; align-items: center; gap: 8px;">
+              <span class="chip chip--service" style="background-color: var(--coral-tint); color: var(--coral-ink); font-weight: 800;">Limping or hurt paw</span>
+              <span style="font-size: 13px; font-weight: 600; color: var(--ink-soft);">Right forelimb</span>
+            </div>
+          </div>
+
+          <!-- Medical Background -->
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div style="font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-soft);">Medical Background</div>
+            <div style="font-size: 14px; line-height: 20px; font-weight: 600; color: var(--ink-soft);">
+              Fully vaccinated · No known drug allergies · Routine checkup 3 months ago
+            </div>
+          </div>
+        </div>
+
+        <!-- Recommended Room Setup Checklist -->
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <h2>Recommended Room Setup</h2>
+          <div class="card">
+            <div class="checklist">
+              <div class="checklist__item checklist__item--checked">
+                <span class="checklist__box" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span>Assign Exam Room 2 (Spacious)</span>
+              </div>
+              <div class="checklist__item checklist__item--checked">
+                <span class="checklist__box" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span>Digital X-ray imaging on standby</span>
+              </div>
+              <div class="checklist__item checklist__item--checked">
+                <span class="checklist__box" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span>Splint & limb bandaging kit ready</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="screen__actions" style="display: flex; flex-direction: column; gap: 10px;">
+          <a href="tracker.html" class="btn btn--primary">Accept & Reserve Exam Room</a>
+          <a href="edge-declined.html" class="btn btn--secondary" style="border-color: var(--line); color: var(--ink-soft);">Decline (At Full Capacity)</a>
+        </div>
+
+      </main>
+
+    </div>
+  </div>
+
+</body>
+</html>
